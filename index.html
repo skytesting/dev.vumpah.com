@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vumpah | Estampagem Personalizada</title>
+    <style>
+        /* Estilos Base */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        h1, h2, h3 { color: var(--primary-color); }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Cabeçalho e Navegação */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 { margin: 0; color: white; }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav a:hover { color: var(--accent-color); }
+
+        /* Banner Principal (Hero) */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1562157873-818bc0726f68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') center/cover;
+            color: white;
+        }
+        .hero h2 { color: white; font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+
+        /* Secção de Produtos */
+        .container { padding: 3rem 5%; max-width: 1200px; margin: auto; }
+        .section-title { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+        
+        .produtos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .produto-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 250px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .produto-card:hover { transform: translateY(-5px); }
+        .produto-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .btn-comprar {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-comprar:hover { background-color: #c0392b; }
+
+        /* Formulário de Contacto */
+        .contacto-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group textarea { height: 120px; resize: vertical; }
+        .btn-enviar {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .btn-enviar:hover { background-color: #1a252f; }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vumpah</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Estampagem Personalizada</h2>
+        <p>A tua marca, o teu estilo. Personalizamos o que precisares com a melhor qualidade.</p>
+    </section>
+
+    <section id="produtos" class="container">
+        <h2 class="section-title">Os Nossos Produtos</h2>
+        <div class="produtos-grid">
+            
+            <div class="produto-card">
+                <div class="produto-icon">👕</div>
+                <h3>T-Shirts</h3>
+                <p>Estampagem duradoura em algodão premium.</p>
+                <p><strong>Desde 15,00€</strong></p>
+                <button class="btn-comprar" onclick="alert('Funcionalidade de carrinho em desenvolvimento!')">Comprar</button>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto-icon">🧢</div>
+                <h3>Chapéus / Bonés</h3>
+                <p>Personaliza com o teu logo ou frase.</p>
+                <p><strong>Desde 12,00€</strong></p>
+                <button class="btn-comprar" onclick="alert('Funcionalidade de carrinho em desenvolvimento!')">Comprar</button>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto-icon">👟</div>
+                <h3>Ténis</h3>
+                <p>Arte e estampagem exclusiva no teu calçado.</p>
+                <p><strong>Desde 45,00€</strong></p>
+                <button class="btn-comprar" onclick="alert('Funcionalidade de carrinho em desenvolvimento!')">Comprar</button>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto-icon">☕</div>
+                <h3>Canecas</h3>
+                <p>Canecas de cerâmica com qualidade fotográfica.</p>
+                <p><strong>Desde 10,00€</strong></p>
+                <button class="btn-comprar" onclick="alert('Funcionalidade de carrinho em desenvolvimento!')">Comprar</button>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto-icon">🍽️</div>
+                <h3>Pratos</h3>
+                <p>Pratos decorativos ou de uso com a tua imagem.</p>
+                <p><strong>Desde 18,00€</strong></p>
+                <button class="btn-comprar" onclick="alert('Funcionalidade de carrinho em desenvolvimento!')">Comprar</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contacto" class="container">
+        <h2 class="section-title">Fale Connosco / Pedir Orçamento</h2>
+        <form class="contacto-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! (Demonstração)');">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required placeholder="O teu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="o-teu-email@exemplo.com">
+            </div>
+            <div class="form-group">
+                <label for="assunto">Assunto / Produto de Interesse</label>
+                <input type="text" id="assunto" name="assunto" required placeholder="Ex: Orçamento para 10 T-shirts">
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Como podemos ajudar?"></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Vumpah. Todos os direitos reservados.</p>
+        <p>Alojado em dev.vumpah.com</p>
+    </footer>
+
+</body>
+</html>
+
